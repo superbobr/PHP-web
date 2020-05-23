@@ -4,11 +4,11 @@ $login = !empty($_GET['login']) ? $_GET['login'] : '';
 $password = !empty($_GET['password']) ? $_GET['password'] : '';
 
 if ($login === 'admin' && $password === 'Pa$$w0rd') {
-    $login = 'Вы успешно авторизировались!';
+    $authorized = 'Вы успешно авторизировались!';
 } elseif ($login !== 'admin') {
-    $login = 'Пользователь не найден';
+    $authorized = 'Пользователь не найден';
 } else {
-    $login = 'Пароль неверный!';
+    $authorized = 'Пароль неверный!';
 }
 ?>
 <html lang="ru">
@@ -17,7 +17,7 @@ if ($login === 'admin' && $password === 'Pa$$w0rd') {
 </head>
 <body>
 <p>
-    <?php echo $login ?>
+    <?php echo $authorized ?>
 </p>
 </body>
 </html>
